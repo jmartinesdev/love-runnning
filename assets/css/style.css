@@ -52,3 +52,32 @@ h1, h2 {
 .active {
     border-bottom: 1px solid #3a3a3a;
 }
+
+/* A div criada dentro da section tem um tamanho de 600px por 100% de largura, porem a imagem dentro da div estorou e sobressaiu no header e navegador, sendo assim criamos um ID para na section que é PAI da DIV com as mesmas propriedades de largura e altura, sendo assim a div e a section tem o mesmo tamnho, para que nao estoure dentro do header usamos a o OVERFLOW */
+
+#hero-outer {
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#hero-image {
+    height: 600px;
+    width: 100%;
+    background: url('/image/hero-image.webp') no-repeat center center;
+
+    animation: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+/* creat the level of zoom for hero image */
+
+@keyframes hero-zoom {
+    from {
+    transform: scale(1);
+    }
+    to {
+    transform: scale(1.1);
+    }
+}
